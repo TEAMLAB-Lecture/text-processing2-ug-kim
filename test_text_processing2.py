@@ -33,7 +33,8 @@ class TestTextProcessing(unittest.TestCase):
 
         test_str = "My number: 010-1234-5678"
         pred = tp.digits_to_words(test_str)
-        self.assertEqual(pred, "zero one zero one two three four five six seven eight")
+        self.assertEqual(
+            pred, "zero one zero one two three four five six seven eight")
 
         test_str = "No digits"
         pred = tp.digits_to_words(test_str)
