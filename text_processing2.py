@@ -78,9 +78,13 @@ def to_camel_case(underscore_str):
     """
     split_str = underscore_str.split("_")
     camelcase_str = []
+
+    if len(split_str) == 1:
+        return underscore_str
+
     for i, s in enumerate(split_str):
         if i == 0:
-            camelcase_str.append(s)
+            camelcase_str.append(s.lower())
         else:
             camelcase_str.append(s.capitalize())
     camelcase_str = "".join(camelcase_str)
